@@ -1,5 +1,5 @@
-DISTANCE_SCALING_FACTOR = 1000000;
-SIZE_SCALING_FACTOR = 1000;
+DISTANCE_SCALING_FACTOR = 50000000;
+SIZE_SCALING_FACTOR = 10000;
 
 /*
 Generated with http://ssd.jpl.nasa.gov/horizons.cgi
@@ -39,7 +39,7 @@ Generated with http://ssd.jpl.nasa.gov/horizons.cgi
 // Sun
 translate([(3.445928995828132E+04/DISTANCE_SCALING_FACTOR),(-5.977842930458921E+05/DISTANCE_SCALING_FACTOR),(-1.137675170209317E+03/DISTANCE_SCALING_FACTOR)]){
     // the sun is huge, so it has its own scaling factor
-    sphere(r=(6.963*100000)/100000);
+    #sphere(r=(6.963*100000)/100000);
 }
 
 // Mercury
@@ -96,4 +96,5 @@ translate([(-1.249308260673955E+09/DISTANCE_SCALING_FACTOR),(-4.354968224879044E
 translate([(-4.270028274993162E+09/DISTANCE_SCALING_FACTOR),(-9.328475878087844E+08/DISTANCE_SCALING_FACTOR),(1.334912452672853E+09/DISTANCE_SCALING_FACTOR)]){
     color("orange")
     sphere(r=1195/SIZE_SCALING_FACTOR);
+    //sphere(r=10);
 }
