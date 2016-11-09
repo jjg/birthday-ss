@@ -39,7 +39,19 @@ difference(){
     union(){
         // mounting plate
         translate([0,0,0]){
-            cylinder(r=50, h=2,$fn=75);
+            difference(){
+                cylinder(r=48, h=2,$fn=75);
+                translate([0,0,-1]){
+                    cylinder(r=47, h=4,$fn=75);
+                }
+            }
+
+            itr = 35;
+            for(rotz = [0:360/itr:360]){
+                rotate(rotz){
+                    cube([48,1,3]);
+                }
+            }
         }
 
         // Sun
