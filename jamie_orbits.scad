@@ -135,7 +135,7 @@ difference(){
             itr = 6;
             for(rotz = [0:360/itr:360]){
                 rotate(rotz){
-                    cube([48,1,3]);
+                    cube([47,1,3]);
                 }
             }
         }
