@@ -37,99 +37,96 @@ Generated with http://ssd.jpl.nasa.gov/horizons.cgi
 */
 difference(){
     union(){
-        // mounting plate
-        translate([0,0,0]){
 
-            // Mercury orbit
-            MERCURY_ORBIT_POS = 3.2;
-            difference(){
-                cylinder(r=MERCURY_ORBIT_POS, h=2, $fn=75);
-                translate([0,0,-1]){
-                    cylinder(r=MERCURY_ORBIT_POS-1, h=4, $fn=75);
-                }
-            }
-
-            // Venus orbit
-            VENUS_ORBIT_POS = 5;
-            difference(){
-                cylinder(r=VENUS_ORBIT_POS, h=2, $fn=75);
-                translate([0,0,-1]){
-                    cylinder(r=VENUS_ORBIT_POS-1, h=4, $fn=75);
-                }
-            }
-
-            // Earth orbit
-            EARTH_ORBIT_POS = 6.5;
-            difference(){
-                cylinder(r=EARTH_ORBIT_POS, h=2, $fn=75);
-                translate([0,0,-1]){
-                    cylinder(r=EARTH_ORBIT_POS-1, h=4, $fn=75);
-                }
-            }
-
-            // Mars orbit
-            MARS_ORBIT_POS = 9.7;
-            difference(){
-                cylinder(r=MARS_ORBIT_POS, h=2, $fn=75);
-                translate([0,0,-1]){
-                    cylinder(r=MARS_ORBIT_POS-1, h=4, $fn=75);
-                }
-            }
-
-            // Jupiter orbit
-            JUPITER_ORBIT_POS = 25;
-            difference(){
-                cylinder(r=JUPITER_ORBIT_POS, h=2, $fn=75);
-                translate([0,0,-1]){
-                    cylinder(r=JUPITER_ORBIT_POS-1, h=4, $fn=75);
-                }
-            }
-
-            // Saturn orbit
-            SATURN_ORBIT_POS = 34;
-            difference(){
-                cylinder(r=SATURN_ORBIT_POS, h=2, $fn=75);
-                translate([0,0,-1]){
-                    cylinder(r=SATURN_ORBIT_POS-1, h=4, $fn=75);
-                }
-            }
-
-            // Uranus orbit
-            URANUS_ORBIT_POS = 28.5;
-            difference(){
-                cylinder(r=URANUS_ORBIT_POS, h=2, $fn=75);
-                translate([0,0,-1]){
-                    cylinder(r=URANUS_ORBIT_POS-1, h=4, $fn=75);
-                }
-            }
-
-            // Neptune orbit
-            NEPTUNE_ORBIT_POS = 46;
-            difference(){
-                cylinder(r=NEPTUNE_ORBIT_POS, h=2, $fn=75);
-                translate([0,0,-1]){
-                    cylinder(r=NEPTUNE_ORBIT_POS-1, h=4, $fn=75);
-                }
-            }
-
-            // Pluto orbit
-            PLUTO_ORBIT_POS = 47.3; 
-            difference(){
-                cylinder(r=PLUTO_ORBIT_POS, h=2, $fn=75);
-                translate([0,0,-1]){
-                    cylinder(r=PLUTO_ORBIT_POS-1, h=4, $fn=75);
-                }
-            }
-
-            // spokes
-            itr = 6;
-            for(rotz = [0:360/itr:360]){
-                rotate(rotz){
-                    cube([47,1,3]);
-                }
+        // Mercury orbit
+        MERCURY_ORBIT_POS = 3.2;
+        difference(){
+            cylinder(r=MERCURY_ORBIT_POS, h=2, $fn=75);
+            translate([0,0,-1]){
+                cylinder(r=MERCURY_ORBIT_POS-1, h=4, $fn=75);
             }
         }
 
+        // Venus orbit
+        VENUS_ORBIT_POS = 5;
+        difference(){
+            cylinder(r=VENUS_ORBIT_POS, h=2, $fn=75);
+            translate([0,0,-1]){
+                cylinder(r=VENUS_ORBIT_POS-1, h=4, $fn=75);
+            }
+        }
+
+        // Earth orbit
+        EARTH_ORBIT_POS = 6.5;
+        difference(){
+            cylinder(r=EARTH_ORBIT_POS, h=2, $fn=75);
+            translate([0,0,-1]){
+                cylinder(r=EARTH_ORBIT_POS-1, h=4, $fn=75);
+            }
+        }
+
+        // Mars orbit
+        MARS_ORBIT_POS = 9.7;
+        difference(){
+            cylinder(r=MARS_ORBIT_POS, h=2, $fn=75);
+            translate([0,0,-1]){
+                cylinder(r=MARS_ORBIT_POS-1, h=4, $fn=75);
+            }
+        }
+
+        // Jupiter orbit
+        JUPITER_ORBIT_POS = 25;
+        difference(){
+            cylinder(r=JUPITER_ORBIT_POS, h=2, $fn=75);
+            translate([0,0,-1]){
+                cylinder(r=JUPITER_ORBIT_POS-1, h=4, $fn=75);
+            }
+        }
+
+        // Saturn orbit
+        SATURN_ORBIT_POS = 34;
+        difference(){
+            cylinder(r=SATURN_ORBIT_POS, h=2, $fn=75);
+            translate([0,0,-1]){
+                cylinder(r=SATURN_ORBIT_POS-1, h=4, $fn=75);
+            }
+        }
+
+        // Uranus orbit
+        URANUS_ORBIT_POS = 28.5;
+        difference(){
+            cylinder(r=URANUS_ORBIT_POS, h=2, $fn=75);
+            translate([0,0,-1]){
+                cylinder(r=URANUS_ORBIT_POS-1, h=4, $fn=75);
+            }
+        }
+
+        // Neptune orbit
+        NEPTUNE_ORBIT_POS = 46;
+        difference(){
+            cylinder(r=NEPTUNE_ORBIT_POS, h=2, $fn=75);
+            translate([0,0,-1]){
+                cylinder(r=NEPTUNE_ORBIT_POS-1, h=4, $fn=75);
+            }
+        }
+
+        // Pluto orbit
+        PLUTO_ORBIT_POS = 47.3; 
+        difference(){
+            cylinder(r=PLUTO_ORBIT_POS, h=2, $fn=75);
+            translate([0,0,-1]){
+                cylinder(r=PLUTO_ORBIT_POS-1, h=4, $fn=75);
+            }
+        }
+
+        // spokes
+        itr = 6;
+        for(rotz = [0:360/itr:360]){
+            rotate(rotz){
+                cube([47,1,3]);
+            }
+        }
+        
         // Sun
         translate([(3.445928995828132E+04/DISTANCE_SCALING_FACTOR),(-5.977842930458921E+05/DISTANCE_SCALING_FACTOR),0]){
             // the sun is huge, so it has its own scaling factor
