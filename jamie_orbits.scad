@@ -123,11 +123,11 @@ difference(){
             }
 
             // Pluto orbit
-            MERCURY_ORBIT_POS = 47.3; 
+            PLUTO_ORBIT_POS = 47.3; 
             difference(){
-                cylinder(r=MERCURY_ORBIT_POS, h=2, $fn=75);
+                cylinder(r=PLUTO_ORBIT_POS, h=2, $fn=75);
                 translate([0,0,-1]){
-                    cylinder(r=MERCURY_ORBIT_POS-1, h=4, $fn=75);
+                    cylinder(r=PLUTO_ORBIT_POS-1, h=4, $fn=75);
                 }
             }
 
