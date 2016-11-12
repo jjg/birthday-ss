@@ -40,16 +40,6 @@ difference(){
         // mounting plate
         translate([0,0,0]){
 
-/*
-            // outer ring
-            difference(){
-                cylinder(r=48, h=2,$fn=75);
-                translate([0,0,-1]){
-                    cylinder(r=47, h=4,$fn=75);
-                }
-            }
-*/
-
             // Mercury orbit
             MERCURY_ORBIT_POS = 3.2;
             difference(){
@@ -201,7 +191,8 @@ difference(){
             sphere(r=1195/SIZE_SCALING_FACTOR*4,h=20,$fn=25);
         }
     }
-    // mounting plate
+
+    // trim mounting plate
     translate([0,0,2]){
             cylinder(r=50, h=5,$fn=75);
     }
